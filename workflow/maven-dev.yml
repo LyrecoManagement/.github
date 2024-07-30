@@ -1,13 +1,18 @@
 name: "Build & Publish"
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      artifactId:
+        required: true
+        type: string
+      domain:
+        required: true
+        type: string
 
 env:
   registry: ghcr.io
-  docker_image: ghcr.io/lyrecomanagement/apps/ecommerce/dev/docker
+  docker_image: ghcr.io/lyrecomanagement/apps/${{ inputs.domain }}/dev/${{ inputs.artifactId }}
 
 jobs:
   build:

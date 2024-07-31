@@ -1,0 +1,10 @@
+{
+  "name": "Org: Lyreco Organization Workflow",
+  "description": "Org: Maven build on dev",
+  "categories": [
+    "Java", "Maven"
+  ],
+  "filePatterns": [
+    "^Dockerfile"
+  ]
+}
